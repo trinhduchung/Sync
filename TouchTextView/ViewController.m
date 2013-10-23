@@ -106,6 +106,15 @@
         NSLog(@"%@", [element objectForKey:@"title"]);
         NSLog(@"mp3.zing.vn%@", [element objectForKey:@"href"]);
     }
+    
+    NSURL *mp3URL = [[NSBundle mainBundle] URLForResource:@"mp3Detail" withExtension:@"html"];
+    NSData *mp3Data = [NSData dataWithContentsOfURL:mp3URL];
+    TFHpple *mp3Doc = [[TFHpple alloc] initWithHTMLData:mp3Data];
+    NSString *mp3XpathQueryString = @"//p[@class='_lyricContent rows4']";
+    NSArray * mp3Nodes = [mp3Doc searchWithXPathQuery:mp3XpathQueryString];
+    for (TFHppleElement * element in mp3Nodes) {
+        NSLog(@"%@", [element text]);
+    }
 }
 /*
 - (CMTime)playerItemDuration

@@ -36,6 +36,7 @@
 		82E6B4921817AACB00F6E61E /* sub.json in Resources */ = {isa = PBXBuildFile; fileRef = 82E6B4911817AACB00F6E61E /* sub.json */; };
 		82E6B4991817ABA400F6E61E /* Subtitle.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E6B4961817ABA400F6E61E /* Subtitle.m */; };
 		82E6B49A1817ABA400F6E61E /* Timeline.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E6B4981817ABA400F6E61E /* Timeline.m */; };
+		82F6A46D1817D4F300E56BD3 /* mp3Detail.html in Resources */ = {isa = PBXBuildFile; fileRef = 82F6A46C1817D4F300E56BD3 /* mp3Detail.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		82E6B4961817ABA400F6E61E /* Subtitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Subtitle.m; sourceTree = "<group>"; };
 		82E6B4971817ABA400F6E61E /* Timeline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timeline.h; sourceTree = "<group>"; };
 		82E6B4981817ABA400F6E61E /* Timeline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Timeline.m; sourceTree = "<group>"; };
+		82F6A46C1817D4F300E56BD3 /* mp3Detail.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = mp3Detail.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 				82E6B489181776FF00F6E61E /* HView.m */,
 				82E6B4911817AACB00F6E61E /* sub.json */,
 				823093601817CF5400A7A031 /* search.html */,
+				82F6A46C1817D4F300E56BD3 /* mp3Detail.html */,
 			);
 			path = TouchTextView;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				82E6B48E18178A5F00F6E61E /* She's Gone - Steelheart.mp3 in Resources */,
 				82E6B4921817AACB00F6E61E /* sub.json in Resources */,
 				823093611817CF5400A7A031 /* search.html in Resources */,
+				82F6A46D1817D4F300E56BD3 /* mp3Detail.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
