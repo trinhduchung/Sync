@@ -10,6 +10,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import <CoreMedia/CoreMedia.h>
 #import "HView.h"
+#import "HLabel.h"
 #import "Subtitle.h"
 #import "TFHpple.h"
 
@@ -17,6 +18,7 @@
     
 }
 @property (nonatomic, strong) HView *simpleView;
+@property (nonatomic, strong) HLabel *simpleLabel;
 
 @property (nonatomic, strong) AVAudioPlayer *audioPlayer;
 @property (nonatomic, strong) NSTimer *timer;
@@ -29,16 +31,28 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    NSString * text = @"She's gone out of my life";
+    
+    NSError *error = nil;
+    NSURL *textURL = [[NSBundle mainBundle] URLForResource:@"text" withExtension:@"txt"];
+    NSString * text = [NSString stringWithContentsOfURL:textURL encoding:NSUTF8StringEncoding error:&error];
     CGSize size = [text sizeWithFont:[UIFont systemFontOfSize:15] constrainedToSize:CGSizeMake(320, 480) lineBreakMode:NSLineBreakByCharWrapping];
-    self.simpleView = [[HView alloc] initWithFrame:CGRectMake(0, 0, size.width + 10, size.height + 10)];
+    self.simpleView = [[HView alloc] initWithFrame:CGRectMake(0, 20, size.width + 10, size.height + 10)];
     [self.simpleView configureView];
     [self.simpleView setText:text];
     
     [self.view addSubview:self.simpleView];
+    
+    self.simpleLabel = [[HLabel alloc] initWithFrame:CGRectMake(0, 20, size.width + 10, size.height + 10)];
+    [self.simpleLabel setText:text];
+    [self.simpleLabel setLineBreakMode:NSLineBreakByWordWrapping];
+    [self.simpleLabel setNumberOfLines:0];
+    [self.simpleLabel setFont:[UIFont systemFontOfSize:15]];
+    [self.simpleLabel setBackgroundColor:[UIColor grayColor]];
+    
+//    [self.view addSubview:self.simpleLabel];
     //Declare the audio file location and settup the player
     NSURL *audioFileLocationURL = [[NSBundle mainBundle] URLForResource:@"She's Gone - Steelheart" withExtension:@"mp3"];
-    NSError *error;
+    
 //    AVPlayerItem * item = [[AVPlayerItem alloc] initWithURL:audioFileLocationURL];
     self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:audioFileLocationURL error:&error];
     

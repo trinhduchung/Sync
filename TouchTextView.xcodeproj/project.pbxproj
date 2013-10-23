@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77F3551618180CA300D12BA0 /* text.txt in Resources */ = {isa = PBXBuildFile; fileRef = 77F3551518180CA300D12BA0 /* text.txt */; };
 		8230935B1817CEA200A7A031 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 823093561817CEA200A7A031 /* TFHpple.m */; };
 		8230935C1817CEA200A7A031 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 823093581817CEA200A7A031 /* TFHppleElement.m */; };
 		8230935D1817CEA200A7A031 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 8230935A1817CEA200A7A031 /* XPathQuery.m */; };
@@ -50,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		77F3551518180CA300D12BA0 /* text.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = text.txt; sourceTree = "<group>"; };
+		77F355171818103100D12BA0 /* constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
 		823093551817CEA200A7A031 /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
 		823093561817CEA200A7A031 /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
 		823093571817CEA200A7A031 /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
@@ -182,6 +185,8 @@
 				82E6B4911817AACB00F6E61E /* sub.json */,
 				823093601817CF5400A7A031 /* search.html */,
 				82F6A46C1817D4F300E56BD3 /* mp3Detail.html */,
+				77F3551518180CA300D12BA0 /* text.txt */,
+				77F355171818103100D12BA0 /* constants.h */,
 			);
 			path = TouchTextView;
 			sourceTree = "<group>";
@@ -266,6 +271,11 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Axon Active Vietnam";
+				TargetAttributes = {
+					82E6B4461817715B00F6E61E = {
+						DevelopmentTeam = 236759N93L;
+					};
+				};
 			};
 			buildConfigurationList = 82E6B4421817715B00F6E61E /* Build configuration list for PBXProject "TouchTextView" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -299,6 +309,7 @@
 				82E6B4921817AACB00F6E61E /* sub.json in Resources */,
 				823093611817CF5400A7A031 /* search.html in Resources */,
 				82F6A46D1817D4F300E56BD3 /* mp3Detail.html in Resources */,
+				77F3551618180CA300D12BA0 /* text.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,11 +465,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TouchTextView/TouchTextView-Prefix.pch";
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "TouchTextView/TouchTextView-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -467,11 +481,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TouchTextView/TouchTextView-Prefix.pch";
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "TouchTextView/TouchTextView-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

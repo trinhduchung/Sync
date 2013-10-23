@@ -9,13 +9,6 @@
 #import "HView.h"
 #import "HLabel.h"
 
-#define HPhoneticTextViewInset 5
-#define HPhoneticTextViewDefaultColor [UIColor blackColor]
-#define HPhoneticTextViewHighlightColor [UIColor yellowColor]
-
-#define UILabelMagicTopMargin 5
-#define UILabelMagicLeftMargin -5
-
 @implementation HView {
     HLabel *label;
     NSMutableAttributedString *labelText;
