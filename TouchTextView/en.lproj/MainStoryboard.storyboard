@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zhv-ez-JDm">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="108" id="qC9-o0-NxG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Start Sync">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didStartSyncPressed:" destination="2" eventType="touchUpInside" id="5K3-fv-jBj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0LH-4L-WIC">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Pause Sync">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPauseSyncPressed:" destination="2" eventType="touchUpInside" id="aFC-g5-CTB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yJ-EN-AWP">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="AnI-4B-gLZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Resume Sync">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didResumeSyncPressed:" destination="2" eventType="touchUpInside" id="QWl-0T-y9Y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHy-Ji-RmR">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="YZI-or-yKv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPlayPressed:" destination="2" eventType="touchUpInside" id="m8F-xA-PfD"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="NFE-in-B9s">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="285" id="NUx-of-GMH"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="valueChangeSliderTimer:" destination="2" eventType="valueChanged" id="jxF-M6-gNh"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="1yJ-EN-AWP" secondAttribute="bottom" constant="30" id="0Jq-O8-cBX"/>
+                            <constraint firstItem="1yJ-EN-AWP" firstAttribute="trailing" secondItem="0LH-4L-WIC" secondAttribute="trailing" type="default" id="1xL-5e-LCt"/>
+                            <constraint firstItem="1yJ-EN-AWP" firstAttribute="baseline" secondItem="0LH-4L-WIC" secondAttribute="baseline" type="default" id="8N1-ob-AyG"/>
+                            <constraint firstItem="dHy-Ji-RmR" firstAttribute="bottom" secondItem="Zhv-ez-JDm" secondAttribute="bottom" type="default" id="A5s-PF-brb"/>
+                            <constraint firstItem="0LH-4L-WIC" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="GSM-ue-gpV"/>
+                            <constraint firstAttribute="bottom" secondItem="0LH-4L-WIC" secondAttribute="bottom" constant="88" id="L4U-oc-hml"/>
+                            <constraint firstAttribute="bottom" secondItem="Zhv-ez-JDm" secondAttribute="bottom" constant="149" id="WbQ-Yw-hqy"/>
+                            <constraint firstItem="0LH-4L-WIC" firstAttribute="trailing" secondItem="Zhv-ez-JDm" secondAttribute="trailing" type="default" id="XYF-Kt-GO8"/>
+                            <constraint firstItem="NFE-in-B9s" firstAttribute="centerY" secondItem="3" secondAttribute="centerY" type="default" id="Xi6-Uy-who"/>
+                            <constraint firstAttribute="trailing" secondItem="dHy-Ji-RmR" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ZaQ-nj-wze"/>
+                            <constraint firstItem="NFE-in-B9s" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="ieF-sN-SQo"/>
+                            <constraint firstItem="0LH-4L-WIC" firstAttribute="baseline" secondItem="Zhv-ez-JDm" secondAttribute="baseline" type="default" id="ilA-2i-8aa"/>
+                            <constraint firstItem="dHy-Ji-RmR" firstAttribute="baseline" secondItem="Zhv-ez-JDm" secondAttribute="baseline" type="default" id="jqX-BS-4c0"/>
+                            <constraint firstItem="1yJ-EN-AWP" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="qu6-EJ-PKg"/>
+                            <constraint firstItem="Zhv-ez-JDm" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="tm4-nq-hYD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="audioPositon" destination="NFE-in-B9s" id="W4N-s5-WrB"/>
+                        <outlet property="btnPauseSync" destination="0LH-4L-WIC" id="o2I-5D-WyV"/>
+                        <outlet property="btnPlay" destination="dHy-Ji-RmR" id="K5g-M0-4hd"/>
+                        <outlet property="btnResumeSync" destination="1yJ-EN-AWP" id="ooi-ch-8vP"/>
+                        <outlet property="btnStartSync" destination="Zhv-ez-JDm" id="TqJ-Sb-uT5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="didPauseSyncPressed:"/>
+                <relationship kind="action" name="didPlayPressed:"/>
+                <relationship kind="action" name="didResumeSyncPressed:"/>
+                <relationship kind="action" name="didStartSyncPressed:"/>
+                <relationship kind="action" name="valueChangeSliderTimer:"/>
+                <relationship kind="outlet" name="audioPositon" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="btnPauseSync" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btnPlay" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btnResumeSync" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btnStartSync" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
